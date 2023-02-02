@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bikeypedia</title>
+    
+    <link rel = "icon" href = "../crome browser/21f0a1db48ca4a5b8e9edfd8549f25a5.png"  type = "image/x-icon">
+    <style>
+
+        *{margin: 0;
+        padding: 0;
+    background: linear-gradient(rgb(3, 73, 3)),(black);}
+        header{
+            background-color: rgb(103, 149, 118);
+            background-position: center;
+        height: 200px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        color: white;
+        max-width: 100%;
+        } 
+     
+        .page-footer {
+        background-color: black; height: 100px; max-width: 100%;
+    }
+        body {font-family: Verdana, sans-serif; margin:0;
+        color: #f2f2f2;
+    justify-content: center;
+}
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+a:link, a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+ justify-content: right;
+  text-decoration: none;
+  display: inline-block;
+ 
+}
+
+a:hover, a:active {
+  background-color: green;
+  color: white;
+}
+a {
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 1rem;
+  color: #a1a1af;
+}
+
+
+
+
+a.tag {
+  display: block;
+  padding: 0.3em 0.85em;
+  margin: 0.5em;
+  text-transform: capitalize;
+  border:  solid #2a242f;
+  border-radius: 2em;
+  transition: transform 0.2s;
+  transition-timing-function: cubic-bezier(0.45, -0.85, 0.55, 0.45);
+}
+
+a.tag:hover {
+  transform: scale(1.2);
+  background: linear-gradient(to right,  #d1f057, #044d0c);
+/*   background-clip: text; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  margin: 2em 6em;
+  padding: 3em;
+  display: flex;
+  max-width: 100%;
+  height: 20px;
+  justify-content: left;
+  align-items: center;
+  font-size: 1rem;
+  color: #a1a1af;
+  border: 1px solid #282421;
+  border-radius: 0.35em;
+  box-shadow: 0 10px 60px #070509;
+}
+
+.container .tags {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .tags span {
+  margin-right: 1em;
+  padding: 1em;
+  text-transform: uppercase;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  border-left: 3px solid #28242f;
+  background: linear-gradient(to right, #f9ff49, #016f06);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container .tags a:last-child {
+  margin-left: 0.5em;
+}
+.container .tags a:last-child:hover {
+  color: white;
+}
+.container label {
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: flex-end;
+  border: 2px solid transparent;
+  border-radius: 1em;
+  background-color: #17141d;
+  background-image: radial-gradient(circle at 40%,  #d1f057, #044d0c);
+  transition: all 250ms ease-in-out;
+}
+
+.container label::before {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  z-index: 0;
+  transform: rotate(-35deg);
+  width: 3px;
+  height: 21px;
+  content: "";
+  border-radius: 2px;
+  background-image: linear-gradient(to top, #d1f057, #044d0c);
+  transition: all 250ms ease-in-out;
+}
+
+
+
+.container label:hover {
+  width: 20%;
+}
+
+.container label:hover:before {
+  height: 30px;
+  transform: rotate(-90deg) translate(28px, 15px);
+}
+
+.container label:hover .tag-search {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+    border-radius: 50%;
+  justify-content: right;
+  }
+}
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  padding-left: 19px;
+  border: 2px;
+  border-radius: 40px;
+  font-size: 17px;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    </style>
+</head>
+<header style="height: 200px; background-color: #000000;">
+ <div style="margin-left:40%; margin-right:50%;"> <img src="../crome browser/output-seotoolscentre (2).png"></div>
+</div>
+<div class="container">
+  <p class="tags">
+    <span>Menu</span>
+    <a href="../Untitled-1.html" class="tag">Home</a>  
+    <a href="../gallery.html" class="tag">Gallery</a>  
+    <a href="../contact.html" class="tag active">Contact</a>  
+    <a href="" class="tag">About us</a>  
+    <a href="" class="tag">shop</a>  
+    <a href="" class="tag">profile</a>  
+    <div class="topnav" style="justify-content: right;"><input type="text" placeholder="Search.."></div>
+    
+    </p>
+  
+</div>
+  
+  </header>
+<body style="background: linear-gradient(
+  to right, #135b02, #000000,
+   #035e1a, #013105);">
+   <br>
+   <br><h3 style="text-align:left;style="text-align:justify; font-family: Verdana, Geneva, Tahoma, sans-serif;">Selection of type accoding to your needs:</h3>
+ <p style="text-align:justify; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 12px">
+There are loads of motorbike categories and styles, so it’s important to know what sort of motorbike you’re buying.
+<br>
+You want to be certain your new motorcycle is suited to how you want to use it.
+<br>
+And be aware the style of your motorbike also affects the cost of your motorbike insurance. 
+<br>
+Here's a rundown on the different motorcycle types, what they're designed for and how they're commonly used.</p>
+<br>
+<br>
+<h6> in the picture below we have showed you types of motorcycles with images</h6>
+<img style="margin-left:20%;height: 50%; width:50%;margin-top: 3%;" src="..//crome browser/bwmc2-motorcycle-types.jpg">
+<p></p>
+<br>
+<br>
+<p style="text-align:justify; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 12px">But we need to get deep knowledge of motorbikes to choose a motorbike that is just right for you</p>
+<br>
+<br>
+<p style="text-align:justify; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 12px">There are different categorised motocycle or different types of needs and that's how it parts motorbikes in different categories.
+<br>
+<br>
+<h4 style="text-align:justify; font-family: Verdana, Geneva, Tahoma, sans-serif;">Different types of motorbikes:</h4>
+<br>
+<ul style="text-align:justify; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px">
+  <li>1.Scooters</li>
+  <li>2.Sportsbikes</li>
+  <li>3.Naked motorbikes</li>
+  <li>4.Cruiser motorbikes</li>
+  <li>5.Adventure motorbikes</li>
+  <li>6.Touring motorbikes</li>
+  <li>7.Off-road motorbikes</li>
+  <li>8.Motocross bikes</li>
+  <li>9.Dirt motorbikes</li>
+  <li>10.Enduro bikes</li>
+  <li>11.Monkey bikes</li>
+  <li>12.Groms</li>
+  <li>13.Quad bikes</li>
+  <li>14.Three wheeled motorbikes</li>
+  <li>15.Classic motorbike</li>
+  <li>16.Bobber motorbike</li>
+  <li>17.chopper motorbike</li>
+  </ul></p>
+<br>
+<br>
+<h3>Scooters and mopeds</h3>
+<br>
+<br>
+<div class="row">
+  <div class="column">
+    <img src="../microsoft browser download//pexels-büşranur-aydın-13685324.jpg"  style="width:50%; height: 45%;">
+  </div>
+  <div class="column">
+    <img src="../microsoft browser download//pexels-i̇lknur-çelik-14132854.jpg"  style="width:50%; height: 50%;">
+  </div>
+  <div class="column">
+    <img src="../microsoft browser download/pexels-аlex-ugolkov-8450676.jpg" style=" width: 50%; height:50%;" >
+  </div>
+</div>
+<p style="text-align:justify; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 12px">
+  Italian vespa and piaggio made the scooters alot more recognizable.<br> 
+  Scooters and moped can go from 50cc to 125cc.<br>
+  Good for 2 seating comfortable rides.
+  Price range can go from 50k-3lakh.
+  <br>
+  <br>
+  scooters are good for these types of uses(prons):
+  <br>
+  <br>
+  1.light-weight<br>
+  2.easy to use<br>
+  3.good in traffics<br>
+  4.great storage<br>
+  5.fuel efficiency<br>
+  6.cheap to obtain and operate<br>
+  7.less parking problems<br>
+  8.less licence and police problems
+  <br>
+  <br>
+  some disadvantages of scooters and mopeds(cons):
+  <br><br>
+  1. doesn't provide safety except helmet<br>
+  2.Not good for long roads or travel<br>
+  3.lack of speed
+  <br>
+  <br>
+  After reading all the advantages and disadvantages we need yo know the conculsion:
+
+<br>
+So after reading everything we can say that scooters and moped are good for<u> students, and beginner level drivers and urban use</u> of all the reasons stated above.
+  </p>
+<br>
+<p>click below for list of best scooters in India</p>
+<br>
+<p> <a style="
+  color: black; border-radius: 15%;
+  text-decoration: none;"
+  " href="https://www.bing.com/ck/a?!&&p=80e19d29409164c9JmltdHM9MTY3NDUxODQwMCZpZ3VpZD0xNDczNWIwNi1lNDQyLTZjNTEtMDhkNS00YTVlZTVlYTZkZjEmaW5zaWQ9NTQ5MA&ptn=3&hsh=3&fclid=14735b06-e442-6c51-08d5-4a5ee5ea6df1&psq=list+of+best+scooters+in+india&u=a1aHR0cHM6Ly93d3cuZ29kaWdpdC5jb20vbW90b3ItaW5zdXJhbmNlL3R3by13aGVlbGVyLWluc3VyYW5jZS9maW5kL2Jlc3Qtc2Nvb3R5LWluLWluZGlhIzp-OnRleHQ9V2hhdCUyMEFyZSUyMHRoZSUyMDEwJTIwQmVzdCUyMFNjb290aWVzJTIwaW4lMjBJbmRpYSUzRiwlN0MlMjBTdGFydGluZyUyMGZyb20lM0ElMjAlRTIlODIlQjklMjA4NSUyQzQwMCUyMC4uLiUyME1vcmUlMjBpdGVtcw&ntb=1"> best scooters in India</a></p>
+  
+<br>
+<h3>Sportsbikes</h3>
+  <br>
+  <br>
+  <div class="row">
+    <div class="column">
+      <img src="../microsoft browser download/Free Download Phone Wallpapers HD - PixelsTalk_Net.jpg"  style="width:50%;height: 50%;">
+    </div>
+    <div class="column">
+      <img src="../microsoft browser download/download (6).jpg"  style="width:50%;height: 50%;">
+    </div>
+    <div class="column">
+      <img src="../microsoft browser download/download (5).jpg" style=" width: 50%; height:50%;">
+    </div>
+  </div>
+  <pre>
+  <p style="text-align:justify; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 12px">
+    sport bike (sports motorcycle, or sports bike) is a motorcycle designed and optimized for speed, 
+    acceleration, braking, and cornering on asphalt concrete race tracks and roads. 
+    They are mainly designed for performance at the expense of comfort,
+    fuel economy, and storage in comparison with other motorcycles.</p></pre>
+<pre><div style="font-family:Verdana, Geneva, Tahoma, sans-serif; font: size 12px;">
+    <p>
+      <ul>
+  <li>light-weight:</li>
+   <p>also called entry level, small or beginner bikes.
+      Some two strokes in this class have dramatically higher performance than the four strokes, 
+      being likened to miniature superbikes.Sport bikes with 
+      engine displacements of up to about 500 cc are usually in this class.</p>
+  <li>middle-weight:</li>
+   <p>mid-sized, mid-level,or supersport.Some of the models in this 
+      range qualify for racing in the classes AMA Supersport Championship, 
+      British Supersport Championship and the Supersport World Championship, 
+      but many middleweights do not have a significant presence in racing.
+      Displacements of 600-750 cc are typical.</p>
+  <li>super-bike:</li>
+   <p>liter-class, or literbike, i.e. 1,000 cc or higher. As with supersport,
+      many of the models in this class compete in superbike racing.
+      Open class, hypersport or hyperbike,[16][18][19] are terms sometimes used in league of
+      superbike as a catch-all for everything larger than middleweight.
+      Alternatively, these terms mark a class above
+      the superbikes for the largest displacement sport bikes with the highest top speeds, 
+      with weights somewhat greater than the superbike class</p></pre>
+      </ul>
+    </p>
+  <p> </p></div>
+ <footer class="page-footer"><div style="position: center; height: 50px; width: 50px;text-align: center; margin-left:45%;
+  margin-right:50%;">  <img align="middle" src="../crome browser/21f0a1db48ca4a5b8e9edfd8549f25a5.png"></div>
+
+<br>
+<br>  <p style="text-align: center; background-color: black;">Copyright &copy; 2023 bikeypedia.com</p>
+ </footer></div>
+</body>
+</html>

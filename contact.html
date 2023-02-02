@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bikeypedia</title>
+    
+    <link rel = "icon" href = "../crome browser/21f0a1db48ca4a5b8e9edfd8549f25a5.png"  type = "image/x-icon">
+    <style>
+      
+      body{font-family: Verdana, sans-serif; margin:0;
+        color: #f2f2f2;
+        justify-content: center;
+        background-color: black;
+        background: url(https://i.pinimg.com/originals/c2/86/57/c28657b4d83a85d430544cdc9c291486.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+       header{
+        background-color: rgb(103, 149, 118);
+        background-position: center;
+        height: 200px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        color: white;
+        max-width: 100%;
+        } 
+
+        .page-footer {
+        background-color: black; height: 100%; max-width: 100%;
+    }
+
+    *,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+a:link, a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+ justify-content: right;
+  text-decoration: none;
+  display: inline-block;
+ 
+}
+
+a:hover, a:active {
+  background-color: green;
+  color: white;
+}
+a {
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 1rem;
+  color: #a1a1af;
+}
+
+a.tag {
+  display: block;
+  padding: 0.3em 0.85em;
+  margin: 0.5em;
+  text-transform: capitalize;
+  border:  solid #2a242f;
+  border-radius: 2em;
+  transition: transform 0.2s;
+  transition-timing-function: cubic-bezier(0.45, -0.85, 0.55, 0.45);
+}
+
+a.tag:hover {
+  transform: scale(1.2);
+  background: linear-gradient(to right,  #d1f057, #044d0c);
+/*   background-clip: text; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: black;
+}
+
+.container {
+  margin: 2em 6em;
+  padding: 3em;
+  display: flex;
+  max-width: 100%;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #a1a1af;
+  border: 1px solid #282421;
+  border-radius: 0.35em;
+  box-shadow: 0 10px 60px #070509;
+}
+
+.container .tags {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .tags span {
+  margin-right: 1em;
+  padding: 1em;
+  text-transform: uppercase;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  border-left: 3px solid #28242f;
+  background: linear-gradient(to right, #f9ff49, #016f06);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container .tags a:last-child {
+  margin-left: 0.5em;
+}
+.container .tags a:last-child:hover {
+  color: white;
+}
+
+.container label {
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: flex-end;
+  border: 2px solid black;
+  border-radius: 1em;
+  background-color: #17141d;
+  background-image: radial-gradient(circle at 40%,  #d1f057, #044d0c);
+  transition: all 250ms ease-in-out;
+}
+
+.container label::before {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  z-index: 0;
+  transform: rotate(-35deg);
+  width: 3px;
+  height: 21px;
+  content: "";
+  border-radius: 2px;
+  background-image: linear-gradient(to top, #d1f057, #044d0c);
+  transition: all 250ms ease-in-out;
+}
+
+.container label:hover {
+  width: 20%;
+}
+
+.container label:hover:before {
+  height: 30px;
+  transform: rotate(-90deg) translate(28px, 15px);
+}
+
+.container label:hover .tag-search {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+    border-radius: 50%;
+  justify-content: right;
+  }
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  padding-left: 19px;
+  border: 2px;
+  border-radius: 40px;
+  font-size: 17px;}
+  .content{
+  width: 330px;
+  border-radius: 10px;
+  padding: 40px 30px;
+  margin-top: 100px;
+  box-shadow: -3px -3px 9px #aaa9a9a2,
+              3px 3px 7px rgba(147, 149, 151, 0.671);
+}
+
+/*Design the headings*/
+.content .text{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: rgb(247, 233, 233);
+  justify-content: center;
+}
+
+/*Design the input spaces*/
+.content .field{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.field input{
+  height: 100%;
+  width: 100%;
+  padding-left: 45px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  color: #e0d2d2;
+  border: 1px solid rgba(255, 255, 255, 0.438);
+  border-radius: 8px;
+  background: rgba(105, 105, 105, 0);
+  justify-content: center;
+}
+
+.field input::placeholder{
+  color: #e0d2d2a6;
+}
+
+.field:nth-child(2){
+  margin-top: 10px;
+}
+
+.field span{
+  position: absolute;
+  width: 50px;
+  line-height: 50px;
+  color: #120c0c;
+}
+
+/* login button */
+button{
+  margin: 25px 0 0 0;
+  width: 100%;
+  height: 50px;
+  color: rgb(238, 226, 226);
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid rgba(252, 250, 250, 0.978);
+  border-radius: 8px;
+  background: rgba(105, 105, 105, 0);
+ margin-top: 40px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.content .or{
+  color: rgba(255, 255, 255, 0.733);
+  margin-top: 9px;
+}
+  
+      </style>
+      <header style="height: 200px; background-color: #000000;">
+ <div style="margin-left:40%; margin-right:50%; background-color: #070509;"> <img src="../crome browser/output-seotoolscentre (2).png"></div>
+</div>
+<div class="container">
+  <p class="tags">
+    <span>Menu</span>
+    <a href="../Untitled-1.html" class="tag">Home</a>  
+    <a href="../gallery.html" class="tag">Gallery</a>  
+    <a href="../contact.html" class="tag active">Contact</a>  
+    <a href="" class="tag">About us</a>  
+    <a href="" class="tag">shop</a>  
+    <a href="" class="tag">profile</a>  
+    <div class="topnav" style="justify-content: right;"><input type="text" placeholder="Search.."></div>
+    
+    </p>
+  
+</div>
+      <body>
+        <!--Basic structure of login form-->
+<div class="content">
+<!--heading -->
+ <div class="text">Contact us</div>
+
+  <form action="#">
+<!--Place to input email-->
+    <div class="field">
+      <span class="fa fa-user"></span>
+      <input type="text" placeholder="Email Id" required>
+    </div>
+
+<!--Place to input password-->
+    <div class="field">
+      <span class="fa fa-lock"></span>
+      <input type="text" placeholder="Enter your name" required>
+    </div>
+<br>
+    <div class="field">
+      <span class="fa fa-lock"></span>
+      <input type="text" placeholder="Ask us/give suggestions" required>
+    </div>
+ <!--login button -->   
+    <button>SUBMIT</button>
+  </form>
+
+
+
+  <pre><b>
+  <p style="justify-content: right; font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 20px;
+  text-align: right;"> 
+                                                                                                                                          We are open to suggestions about our website 
+                                                                                                                                       and visitors can ask anything about our content.
+                                                                                                                                                     Please fill the form in a decent manner.</p></pre></b>
+</div>
+      </body>
+      <footer class="page-footer"><div style="position: center; height: 70px; width: 50px;text-align: center; margin-left:45%;
+        margin-right:50%;">  <img align="middle" src="../crome browser/21f0a1db48ca4a5b8e9edfd8549f25a5.png"></div>
+      <br>
+      <br>  <p style="text-align: center; background-color: black;">Copyright &copy; 2023 bikeypedia.com</p>
+       </footer></div>
+      </html>

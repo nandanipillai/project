@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bikeypedia</title>
+  <link rel="icon" href="../crome browser/21f0a1db48ca4a5b8e9edfd8549f25a5.png" type="image/x-icon">
+  <style>
+     *{margin: 0;
+        padding: 0;
+    background: linear-gradient(rgb(3, 73, 3)),(black);}
+        header{
+            background-color: rgb(103, 149, 118);
+            background-position: center;
+        height: 200px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        color: white;
+        max-width: 100%;
+        } 
+        .page-footer {
+        background-color: black; height: 100px; max-width: 100%;
+    }
+        body {font-family: Verdana, sans-serif; margin:0;
+        color: #f2f2f2;
+    justify-content: center;
+}
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+a:link, a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+ justify-content: right;
+  text-decoration: none;
+  display: inline-block;
+ 
+}
+a:hover, a:active {
+  background-color: green;
+  color: white;
+}
+a {
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 1rem;
+  color: #a1a1af;
+}
+a.tag {
+  display: block;
+  padding: 0.3em 0.85em;
+  margin: 0.5em;
+  text-transform: capitalize;
+  border:  solid #2a242f;
+  border-radius: 2em;
+  transition: transform 0.2s;
+  transition-timing-function: cubic-bezier(0.45, -0.85, 0.55, 0.45);
+}
+a.tag:hover {
+  transform: scale(1.2);
+  background: linear-gradient(to right,  #d1f057, #044d0c);
+/*   background-clip: text; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.container {
+  margin: 2em 6em;
+  padding: 3em;
+  display: flex;
+  max-width: 100%;
+  height: 20px;
+  justify-content: left;
+  align-items: center;
+  font-size: 1rem;
+  color: #a1a1af;
+  border: 1px solid #282421;
+  border-radius: 0.35em;
+  box-shadow: 0 10px 60px #070509;
+}
+
+.container .tags {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .tags span {
+  margin-right: 1em;
+  padding: 1em;
+  text-transform: uppercase;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  border-left: 3px solid #28242f;
+  background: linear-gradient(to right, #f9ff49, #016f06);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container .tags a:last-child {
+  margin-left: 0.5em;
+}
+.container .tags a:last-child:hover {
+  color: white;
+}
+.container label {
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: flex-end;
+  border: 2px solid transparent;
+  border-radius: 1em;
+  background-color: #17141d;
+  background-image: radial-gradient(circle at 40%,  #d1f057, #044d0c);
+  transition: all 250ms ease-in-out;
+}
+
+.container label::before {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  z-index: 0;
+  transform: rotate(-35deg);
+  width: 3px;
+  height: 21px;
+  content: "";
+  border-radius: 2px;
+  background-image: linear-gradient(to top, #d1f057, #044d0c);
+  transition: all 250ms ease-in-out;
+}
+
+
+
+.container label:hover {
+  width: 20%;
+}
+
+.container label:hover:before {
+  height: 30px;
+  transform: rotate(-90deg) translate(28px, 15px);
+}
+
+.container label:hover .tag-search {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.topnav input[type=text] {
+    border: 1px solid #ccc;  
+    border-radius: 50%;
+  justify-content: right;
+  }
+  .topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  padding-left: 19px;
+  border: 2px;
+  border-radius: 40px;
+  font-size: 17px;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+  </style>
+</head>
+<body>
+  
+</body>
+</html>
+<header style="height: 200px; background-color: #000000;">
+  <div style="margin-left:40%; margin-right:50%;"> <img src="../crome browser/output-seotoolscentre (2).png"></div>
+ </div>
+ <div class="container">
+   <p class="tags">
+     <span>Menu</span>
+     <a href="../Untitled-1.html" class="tag">Home</a>  
+     <a href="../gallery.html" class="tag">Gallery</a>  
+     <a href="../contact.html" class="tag active">Contact</a>  
+     <a href="" class="tag">About us</a>  
+     <a href="" class="tag">shop</a>  
+     <a href="" class="tag">profile</a>  
+     <div class="topnav" style="justify-content: right;"><input type="text" placeholder="Search.."></div>
+     
+     </p>
+   
+ </div>
+   
+   </header>
+ <body style="background: linear-gradient(
+   to right, #135b02, #000000,
+    #035e1a, #013105);">
+  
+
+      <div class="row">
+        <div class="column">
+          <img src="https://images.pexels.com/photos/5195673/pexels-photo-5195673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  style="width:100%">
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="https://images.pexels.com/photos/2132174/pexels-photo-2132174.jpeg?auto=compress&cs=tinysrgb&w=600"  style="width:100%">
+          </div>
+          <div class="row">
+    <div class="column">
+              <img src="https://images.pexels.com/photos/2885326/pexels-photo-2885326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  style="width:100%">
+            </div>
+            </div>
+
+ <div class="row">
+              <div class="column">
+                <img src="https://images.pexels.com/photos/4655775/pexels-photo-4655775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  style="width:100%">
+              </div>
+              <div class="row">
+                <div class="column">
+                  <img src="https://images.pexels.com/photos/4655763/pexels-photo-4655763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  style="width:100%">
+                </div>
+  <div class="row">
+                  <div class="column">
+                    <img src="https://images.pexels.com/photos/4655765/pexels-photo-4655765.jpeg?auto=compress&cs=tinysrgb&w=600"  style="width:100%">
+                  </div>
+                </div>
+
+ <div class="row">
+                  <div class="column">
+                    <img src="https://images.pexels.com/photos/5195493/pexels-photo-5195493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  style="width:100%">
+                  </div>
+ <div class="row">
+                    <div class="column">
+                      <img src="https://images.pexels.com/photos/4431093/pexels-photo-4431093.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"  style="width:100%">
+                    </div>
+  <div class="row">
+                      <div class="column">
+                        <img src="https://images.pexels.com/photos/12495475/pexels-photo-12495475.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"  style="width:100%; height: 80%;" >
+                      </div>
+                    </div>
+
+   <div class="row">
+                      <div class="column">
+                        <img src="https://images.pexels.com/photos/11696376/pexels-photo-11696376.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"  style="width:100%">
+                      </div>
+  <div class="row">
+                        <div class="column">
+                          <img src="https://images.pexels.com/photos/10939877/pexels-photo-10939877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  style="width:100%">
+                        </div>
+     <div class="row">
+                          <div class="column">
+                            <img src="https://th.bing.com/th/id/R.3322b2a1b8046109324dc1995ad09e69?rik=BL9RgyxvGtfguw&riu=http%3a%2f%2fpavbca.com%2fwalldb%2foriginal%2fe%2fb%2f2%2f24532.jpg&ehk=k3QNQKc67%2bghPc3Et4LSEs9MzuDjz1cK4hAuAfGwVlg%3d&risl=&pid=ImgRaw&r=0"  style="width:100%">
+                          </div>
+                        </div>
+
+       <div class="row">
+                          <div class="column">
+                            <img src="https://images.pexels.com/photos/5794242/pexels-photo-5794242.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  style="width:100%">
+                          </div>
+       <div class="row">
+                            <div class="column">
+                              <img src="https://images.pexels.com/photos/12229852/pexels-photo-12229852.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  style="width:100%">
+                            </div>
+       <div class="row">
+                              <div class="column">
+                                <img src="https://images.pexels.com/photos/11194992/pexels-photo-11194992.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"  style="width:100%">
+                              </div>
+                            </div>
+
+       <div class="row">
+                              <div class="column">
+                                <img src="https://images.pexels.com/photos/2396045/pexels-photo-2396045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  style="width:100%">
+                              </div>
+      <div class="row">
+                                <div class="column">
+                                  <img src="https://images.pexels.com/photos/2519371/pexels-photo-2519371.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"  style="width:100%">
+                                </div>
+        <div class="row">
+                                  <div class="column">
+                                    <img src="https://images.pexels.com/photos/2519372/pexels-photo-2519372.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"  style="width:100%">
+                                  </div>
+                                </div>
+
+       <div class="row">
+                                  <div class="column">
+                                    <img src="https://images.pexels.com/photos/12631620/pexels-photo-12631620.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"  style="width:100%">
+                                  </div>
+       <div class="row">
+                                    <div class="column">
+                                      <img src="https://images.pexels.com/photos/6503925/pexels-photo-6503925.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  style="width:100%">
+                                    </div>
+      <div class="row">
+                                      <div class="column">
+                                        <img src="https://images.pexels.com/photos/4922616/pexels-photo-4922616.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"  style="width:100%">
+                                      </div>
+                                    </div>
+
+       <div class="row">
+                                      <div class="column">
+                                        <img src="https://images.pexels.com/photos/4922615/pexels-photo-4922615.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"  style="width:100%">
+                                      </div>
+       <div class="row">
+                                        <div class="column">
+                                          <img src="https://images.pexels.com/photos/4922618/pexels-photo-4922618.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"  style="width:100%">
+                                        </div>
+       <div class="row">
+                                          <div class="column">
+                                            <img src="https://images.pexels.com/photos/12000101/pexels-photo-12000101.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"  style="width:100%">
+                                          </div>
+                                        </div>
+
+                            
+</body>
+</html>

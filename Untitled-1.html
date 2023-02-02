@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bikeypedia</title>
+    
+    <link rel = "icon" href = "../crome browser/21f0a1db48ca4a5b8e9edfd8549f25a5.png"  type = "image/x-icon">
+    <style>
+
+
+        *{margin: 0;
+        padding: 0;
+    background: linear-gradient(rgb(3, 73, 3)),(black);}
+        header{
+            background-color: rgb(103, 149, 118);
+            background-position: center;
+        height: 200px;
+        max-width: 100%;
+        } 
+     
+        .page-footer {
+        background-color: black; height: 100px; max-width: 100%;
+    }
+        body {font-family: Verdana, sans-serif; margin:0;
+        color: #f2f2f2;
+    justify-content: center;
+}
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+a:link, a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+ justify-content: right;
+  text-decoration: none;
+  display: inline-block;
+ 
+}
+
+a:hover, a:active {
+  background-color: green;
+  color: white;
+}
+a {
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 1rem;
+  color: #a1a1af;
+}
+
+a.tag {
+  display: block;
+  padding: 0.3em 0.85em;
+  margin: 0.5em;
+  text-transform: capitalize;
+  border:  solid #2a242f;
+  border-radius: 2em;
+  transition: transform 0.2s;
+  transition-timing-function: cubic-bezier(0.45, -0.85, 0.55, 0.45);
+}
+
+a.tag:hover {
+  transform: scale(1.2);
+  background: linear-gradient(to right,  #d1f057, #044d0c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  margin: 2em 6em;
+  padding: 3em;
+  display: flex;
+  max-width: 100%;
+  height: 20px;
+  justify-content: left;
+  align-items: center;
+  font-size: 1rem;
+  color: #a1a1af;
+  border: 1px solid #282421;
+  border-radius: 0.35em;
+  box-shadow: 0 10px 60px #070509;
+}
+
+.container .tags {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .tags span {
+  margin-right: 1em;
+  padding: 1em; 
+  text-transform: uppercase;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  border-left: 3px solid #28242f;
+  background: linear-gradient(to right, #f9ff49, #016f06);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container .tags a:last-child {
+  margin-left: 0.5em;
+}
+.container .tags a:last-child:hover {
+  color: white;
+}
+.container label {
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: flex-end;
+  border: 2px solid transparent;
+  border-radius: 1em;
+  background-color: #17141d;
+  background-image: radial-gradient(circle at 40%,  #d1f057, #044d0c);
+  transition: all 250ms ease-in-out;
+}
+
+.container label::before {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  z-index: 0;
+  transform: rotate(-35deg);
+  width: 3px;
+  height: 21px;
+  content: "";
+  border-radius: 2px;
+  background-image: linear-gradient(to top, #d1f057, #044d0c);
+  transition: all 250ms ease-in-out;
+}
+
+
+
+.container label:hover {
+  width: 20%;
+}
+
+.container label:hover:before {
+  height: 30px;
+  transform: rotate(-90deg) translate(28px, 15px);
+}
+
+.container label:hover .tag-search {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+    border-radius: 50%;
+  justify-content: right;
+  }
+}
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  padding-left: 19px;
+  border: 2px;
+  border-radius: 40px;
+  font-size: 17px;
+}
+
+#slideshow {
+		overflow: hidden;
+		height: 510px;
+		width: 728px;
+		margin: 0 auto;
+	}
+	
+	/* Style each of the sides
+	with a fixed width and height */
+	
+	.slide {
+		float: left;
+		height: 510px;
+		width: 728px;
+	}
+	
+	/* Add animation to the slides */
+	
+	.slide-wrapper {
+		
+		/*  total width of number of slides */
+		width: calc(728px * 4);
+		
+		/* animation with the
+	duration and speed */
+		animation: slide 10s ease infinite;
+	}
+	
+
+	/* animation
+	for the slideshow */
+	
+	@keyframes slide {
+		
+		/* Calculate the margin-left for
+	each of the slides */
+		20% {
+			margin-left: 0px;
+		}
+		40% {
+			margin-left: calc(-728px * 1);
+		}
+		60% {
+			margin-left: calc(-728px * 2);
+		}
+		80% {
+			margin-left: calc(-728px * 3);
+		}
+	}
+  .column {
+  float: left;
+  width: 33.33%;
+  padding: 1px;
+  margin-right: 0%;
+  padding-right: 0%;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    </style>
+</head>
+<header style="height: 200px; background-color: #000000;"><p>
+ <div style="margin-left:40%; margin-right:50%;"> <img src="../crome browser/output-seotoolscentre (2).png"</div>
+</div><div class="container">
+  <p class="tags">
+    <span>Menu</span>
+    <a href="../Untitled-1.html" class="tag">Home</a>  
+    <a href="../gallery.html" class="tag">Gallery</a>  
+    <a href="../contact.html" class="tag active">Contact</a>  
+    <a href="" class="tag">About us</a>  
+    <a href="" class="tag">shop</a>  
+    <a href="" class="tag">profile</a>  
+    <div class="topnav" style="justify-content: right;"><input type="text" placeholder="Search.."></div>
+    
+    </p>
+  
+</div>
+  
+  </header>
+<body style="background: linear-gradient(
+  to right, #135b02, #000000,
+   #035e1a, #013105);">
+   <br>
+   <br>
+  
+  <!-- Define the slideshow container -->
+	<div id="slideshow">
+		<div class="slide-wrapper">
+			<!-- Define each of the slides
+		and write the content -->
+			<div class="slide">
+				<h1 class="slide-number">
+					<img src="..//crome browser/1433024.jpg">
+			</div>
+			<div class="slide">
+			<img src="../crome browser/1907956.jpg">
+			</div>
+			<div class="slide">
+				<img src="../crome browser/5253843.jpg">
+			</div>
+			<div class="slide">
+				<img src="../crome browser/5253945.jpg">
+			</div>
+      
+		</div>
+	</div>
+        <br>
+       <div style="justify-content: center; font-family:Verdana, Geneva, Tahoma, sans-serif;"><pre><p style="font-family: Verdana;"> 
+                                                                  If you're in the market for a new motorcycle,one of the desicions you'll have to make is the type.
+                                                                       There are few different types of motorcycles,including street, off-road and dual-purpose. 
+                                                                                   Within each of these types is several different sub-types,
+                                                                        one of which is cruisers- a sub-type of street bikes and many more.</p></pre></div>  
+
+ <br>
+<pre style="font-family: verdana;">                                                                                                                  click below to continue reading
+</pre>
+<br>
+ <br>   <div style="text-align:center; color: rgb(249, 253, 249);"><a style="position: center; align-items: center;" href="../Untitled-1 - Copy.html" target="_blank">EXPLORE MORE</a></div>
+ <Br>
+  <br>
+  <br>
+  <div class="row">
+    <div class="column">
+      <video controls  autoplay   loop src="https://player.vimeo.com/external/451493337.hd.mp4?s=15c5cfd66dcd17bbaf90e7d01d1823033b10815d&profile_id=174&oauth2_token_id=57447761"  style="width:60%;height: 50%;">
+    </div>
+    <div class="column">
+      <video controls  autoplay  loop src="https://player.vimeo.com/external/476174316.sd.mp4?s=4199260050d05f3a4d108d99f8bb3c56adc44e60&profile_id=165&oauth2_token_id=57447761"  style="width:60%;height: 50%;">
+    </div>
+    <div class="column">
+      <video autoplay controls loop src="../microsoft browser download/320882998_673741764450465_7914643329026201564_n.mp4" style=" width: 60%; height:50%;" >
+    </div>
+  </div>
+  <br><div style="background-color: black;">
+ <footer class="page-footer"><div style="position: center; height: 50px; width: 50px;text-align: center; margin-left:45%;
+  margin-right:50%;">  <img align="middle" src="../crome browser/21f0a1db48ca4a5b8e9edfd8549f25a5.png"></div>
+<br>
+<br>  <p style="text-align: center; background-color: black;">Copyright &copy; 2023 bikeypedia.com</p>
+ </footer></div>
+</body>
+</html>
